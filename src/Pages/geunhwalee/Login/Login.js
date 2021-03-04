@@ -1,7 +1,6 @@
-import React, { Component } from 'react',
+import React, { Component } from 'react';
 
-
-class Login extends Component {
+class Loginlee extends Component {
 	state = {  }
 	render() { 
 		return (
@@ -12,4 +11,4 @@ class Login extends Component {
 	}
 }
  
-export default ;
+export default Loginlee;
