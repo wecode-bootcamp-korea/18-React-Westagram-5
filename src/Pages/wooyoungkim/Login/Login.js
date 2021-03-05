@@ -3,7 +3,7 @@ import './Login.scss';
 import { Link } from 'react-router-dom';
 
 
-class Loginwoo extends Component {
+class Loginwoo extends Component {   
 	state = {  }
 	render() { 
 		return (
