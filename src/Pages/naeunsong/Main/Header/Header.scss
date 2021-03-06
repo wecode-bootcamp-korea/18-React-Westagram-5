@@ -1,0 +1,50 @@
+
+header{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  top:0;
+  border-bottom: solid 1px #dbdbdb; 
+  background-color: white;
+
+  .logo{
+    background-color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 29px;
+  }
+  
+  .searchBar {
+  position:relative;
+
+    img{
+      position:absolute;
+      height: 10px;
+      top: 10px;
+      left: 80px;
+    }
+
+    .search{
+      width: 215px;
+      padding: 7px;
+      border: solid 1px #dbdbdb;
+      background-color: rgba(250,250,250,1);
+      text-align:center;
+    }
+  }
+
+  nav{
+    display:flex;
+    justify-content: space-around;
+    width: 10%;
+    background-color: white;
+
+    img {
+      height: 22px;
+      background-color: white;
+    }
+  }
+}

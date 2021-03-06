@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+input, button{
+  outline: none;
+}
+
+p{
+  margin-left:-5px;
+  color:rgb(104, 69, 69);
+}
+
+.info{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+li{
+  list-style:none;
+}
