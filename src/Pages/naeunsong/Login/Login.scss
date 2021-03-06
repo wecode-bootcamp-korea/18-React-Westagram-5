@@ -52,7 +52,11 @@ input, button{
     line-height: 18px;
     cursor: pointer;
   }
-  
+
+  .activeBtn{
+    opacity:1.0;
+  }
+
   .checkPassword{
     color: #00376b;
     background-color: white;
