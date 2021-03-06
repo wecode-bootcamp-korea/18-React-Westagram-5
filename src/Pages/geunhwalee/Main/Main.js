@@ -70,19 +70,7 @@ class Mainlee extends React.Component {
                         </div>
                     </div>
                     <div className="mainRight">
-                        <div className="accountInfo">
-                        </div>
-                        <div className="suggestionBox">
-                            <div className="suggestionTextBox">
-                                Suggestions For You
-                                <div className="followText">
-                                Follow
-                                </div>
-                            </div>
-                            <div className="suggestionAccounts">
-                                
-                            </div>
-                        </div>
+                        <img src='blob:https://mail.google.com/b93dc97d-5209-4726-b958-e261222e83e4' />
                     </div>
                 </div>
             </div>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram Main Page</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <section class="main-container">
+      <nav>
+        <section class="nav-box">
+          <h1 class="logo">Westagram</h1>
+          <input type="search" placeholder="검색" class="nav-search" />
+          <div class="nav-btns">
+            <div class="nav-btn">
+              <i class="fas fa-home"></i>
+              <a href="#" aria-label="홈" class="icon home"></a>
+            </div>
+            <div class="nav-btn">
+              <i class="far fa-paper-plane"></i>
+              <a href="#" aria-label="다이렉트" class="icon direct inbox"></a>
+            </div>
+            <div class="nav-btn">
+              <i class="far fa-compass"></i>
+              <a href="#" aria-label="사람찾기" class="icon explore"></a>
+            </div>
+            <div class="nav-btn">
+              <i class="far fa-heart"></i>
+              <a href="#" aria-label="활동피드" class="icon activity"></a>
+            </div>
+            <div class="nav-btn">
+              <img
+                src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                alt="profile menu"
+                class="menu-img"
+              />
+              <a href="#" aria-label="메뉴" class="icon menu"></a>
+            </div>
+          </div>
+        </section>
+      </nav>
+      <main>
+        <div class="main-left">
+          <section id="story-nav">
+            <div class="follow-story">
+              <img
+                src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                alt="story image"
+                class="profile-img"
+              />
+              <p class="story-live">Live</p>
+              <p class="follow-name"></p>
+            </div>
+            <div class="story-btns">
+              <a href="#" class="next-btn story-btn"> > </a>
+              <a href="#" class="previous-btn story-btn"> < </a>
+            </div>
+          </section>
+          <section class="feeds">
+            <article class="feed">
+              <div class="feed-header">
+                <div class="card">
+                  <img
+                    src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                    alt="profile image"
+                    class="card-img"
+                  />
+                  <div class="card-content">
+                    <h3 class="user-name">wecode-bootcamp</h3>
+                    <span class="user-loca">WeCode-위코드</span>
+                  </div>
+                </div>
+                <button type="menu" class="feed-btn">…</button>
+              </div>
+              <div class="feed-img">
+                <img
+                  src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                  alt="user image"
+                  class="user-img"
+                />
+                <div class="feed-img-btns">
+                  <a href="#" class="img-btn next-btn"> > </a>
+                  <a href="#" class="img-btn previous-btn"> < </a>
+                </div>
+              </div>
+
+              <div class="feed-footer">
+                <div class="feed-reaction">
+                  <div class="feed-btns">
+                    <div class="feed-btn">
+                      <i class="far fa-heart"></i>
+                      <a href="#" aria-label="좋아요" class="icon activity"></a>
+                    </div>
+                    <div class="feed-btn">
+                      <i class="far fa-comment"></i>
+                      <a
+                        href="#"
+                        aria-label="코멘트"
+                        class="icon comment-page"
+                      ></a>
+                    </div>
+                    <div class="feed-btn">
+                      <i class="far fa-paper-plane"></i>
+                      <a
+                        href="#"
+                        aria-label="게시물 공유"
+                        class="icon direct"
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="feed-btn">
+                    <i class="far fa-bookmark"></i>
+                    <a href="#" aria-label="저장" class="icon bookmark"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="feed-article">
+                <div class="feed-content">
+                  <h3 class="user-name">wecode-bootcamp</h3>
+                  <p class="feed-desc">
+                    "위코드는 단순 교육 업체가 아닌 개발자 커뮤니티 입니다.
+                    Wecode에서 배우고 저는 총 5개 회사에서 오퍼를 받았습니다." -
+                    Wecode 졸업생 위코더님
+                  </p>
+                </div>
+                <div class="feed-comments">
+                  <ul class="comments-list">
+                    <li>
+                      <h3 class="user-name">hellowecode</h3>
+                      <span class="user-comment">댓글1치키차카초코초코초</span>
+                      <i
+                        aria-label="좋아요"
+                        class="far fa-heart comment-like comment-btn"
+                      ></i>
+                    </li>
+                    <li>
+                      <h3 class="user-name">byevscode</h3>
+                      <span class="user-comment">댓글2치키차카초코초코초</span>
+                      <i
+                        aria-label="좋아요"
+                        class="far fa-heart comment-like comment-btn"
+                      ></i>
+                    </li>
+                    <li>
+                      <h3 class="user-name">goodtoseeyou</h3>
+                      <span class="user-comment">댓글3치키차카초코초코초</span>
+                      <i
+                        aria-label="좋아요"
+                        class="far fa-heart comment-like comment-btn"
+                      ></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <form class="input-comment">
+                <i class="far fa-smile"></i>
+                <textarea
+                  aria-label="댓글달기..."
+                  placeholder="댓글 달기..."
+                  id="comment"
+                  class="comment"
+                  autocomplete="off"
+                ></textarea>
+                <button type="submit" class="comment-submit blue">게시</button>
+              </form>
+            </article>
+          </section>
+        </div>
+        <aside class="main-right">
+          <div class="profile-box">
+            <div class="card">
+              <img
+                src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                alt="profile image"
+                class="profile-img"
+              />
+              <div class="card-content">
+                <h3>wecode-bootcamp</h3>
+                <p class="gray">WeCode-위코드</p>
+              </div>
+            </div>
+            <p class="blue">전환</p>
+          </div>
+          <div class="user-recommend">
+            <div class="recommend-title">
+              <h3>회원님을 위한 추천</h3>
+              <p class="bold">모두 보기</p>
+            </div>
+            <div class="recommend-list">
+              <div class="recommend-users">
+                <div class="card">
+                  <img
+                    src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                    alt="profile image1"
+                    class="card-img"
+                  />
+                  <div class="card-content">
+                    <h3>1username1</h3>
+                    <p class="gray">username123님 외 1000명이 팔로우합니다</p>
+                  </div>
+                </div>
+                <p class="blue">팔로우</p>
+              </div>
+              <div class="recommend-users">
+                <div class="card">
+                  <img
+                    src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                    alt="profile image1"
+                    class="card-img"
+                  />
+                  <div class="card-content">
+                    <h3>1username1</h3>
+                    <p class="gray">username1님 외 10명이 팔로우합니다</p>
+                  </div>
+                </div>
+                <p class="blue">팔로우</p>
+              </div>
+              <div class="recommend-users">
+                <div class="card">
+                  <img
+                    src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                    alt="profile image1"
+                    class="card-img"
+                  />
+                  <div class="card-content">
+                    <h3>2username2</h3>
+                    <p class="gray">username2님 외 10명이 팔로우합니다</p>
+                  </div>
+                </div>
+                <p class="blue">팔로우</p>
+              </div>
+              <div class="recommend-users">
+                <div class="card">
+                  <img
+                    src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                    alt="profile image1"
+                    class="card-img"
+                  />
+                  <div class="card-content">
+                    <h3>3username3</h3>
+                    <p class="gray">username4님 외 10명이 팔로우합니다</p>
+                  </div>
+                </div>
+                <p class="bold">팔로잉</p>
+              </div>
+              <div class="recommend-users">
+                <div class="card">
+                  <img
+                  src="https://i.pinimg.com/originals/08/61/b7/0861b76ad6e3b156c2b9d61feb6af864.jpg"
+                  alt="profile image2" class="card-img"" />
+                  <div class="card-content">
+                    <h3>5username5</h3>
+                    <p class="gray">username5님 외 34명이 팔로우합니다</p>
+                  </div>
+                </div>
+                <p class="blue">팔로우</p>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="insta-footer">
+              <a href="#">소개</a>
+              <a href="#">도움말</a>
+              <a href="#">홍보 센터</a>
+              <a href="#">API</a>
+              <a href="#">채용 정보</a>
+              <a href="#">개인정보처리방침</a>
+              <a href="#">약관</a>
+              <a href="#">위치</a>
+              <a href="#">인기 계정</a>
+              <a href="#">해시태그</a>
+              <a href="#">언어</a>
+            </div>
+            <span>© 2021 WESTAGRAM FROM WECODE 18th @sunaaank</span>
+          </footer>
+        </aside>
+      </main>
+      <script src="main.js"></script>
+    </section>
+  </body>
+</html>
