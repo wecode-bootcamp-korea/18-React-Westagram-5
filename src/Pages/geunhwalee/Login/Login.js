@@ -33,6 +33,7 @@ class Loginlee extends React.Component {
 	}
 
 
+
 	render() {
         return(
             <div className="Login">
@@ -41,7 +42,7 @@ class Loginlee extends React.Component {
                         <h1>westagram</h1>
                         <input type="email" className ="username" placeholder="전화번호, 사용자 이름 또는 이메일" onChange={this.handleIdInput}  />
                         <input type="password" className="pswd" placeholder="비밀번호" onChange={this.handlePwInput} />
-                        <button className="loginBtn" onClick={this.goToMain}>로그인</button> 
+                        <button className={(this.state.id.includes("@") && this.state.pw.length>4) ? "btnColorChange" : ".loginBtn"} onClick={this.goToMain}>로그인</button> 
                         <a href="https://www.instagram.com/accounts/password/reset/" id="pwdAsk">비밀번호를 잊으셨나요?</a>
                     </form>
                 </section>
@@ -50,7 +51,5 @@ class Loginlee extends React.Component {
     }
 }
 
-
-//
 
 export default withRouter(Loginlee);

@@ -46,9 +46,24 @@ $line-color: #efefef;
                 margin-top: 3px;
                 border: none;
                 border-radius: 3px;
-                background-color: #c5e1fa;
                 color: white;
+                background-color: #c5e1fa;   
             }
+
+            .btnColorChange {
+                display: block;
+                width: 80%;
+                height: 30px;
+                margin: 5px;
+                margin: 0 auto;
+                margin-top: 3px;
+                border: none;
+                border-radius: 3px;
+                color: white;
+                background-color: #0080ff;
+            }
+
+            
             
             h1 {
                 margin: 0;
