@@ -1,5 +1,6 @@
 import React from "react";
 import "./Feeds.scss";
+import Comment from "./Comment/Comment"
 
 class Feeds extends React.Component {
   render(){
@@ -28,24 +29,7 @@ class Feeds extends React.Component {
               <a>wecode_bootcamp</a> <span>위코드는 단순 교육업체가 아닌 개발자 커뮤니티 입니다. wecode에서 배우고 저는 총 5개 회사에서 오퍼를 받았습니다.</span>
             </div>
           </section>
-          <section className="commentArea">
-            <ul className="commentList">
-              <li>
-                <a>songbetter</a>
-                <span>저도 가고 싶어요!</span>
-              </li>
-              <li>
-                <a>songbetter</a>
-                <span>저도 가고 싶어요!</span>
-              </li>
-            </ul>
-            <span>1시간 전</span>
-            <div className="comment">
-              <img alt="emoji icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" height="24px" />
-              <textarea placeholder="댓글 달기..." className="textArea"></textarea>
-              <button className="commentBtn">게시</button>
-            </div>
-          </section>
+          <Comment/>
         </article>
       </article>
     )
