@@ -32,16 +32,19 @@
         margin-bottom: 10px;
         line-height: $theme-height;
       }
-      .login_btn{
+      button{
         margin-bottom: 70px;
         line-height: $theme-height;
         border: none;
         border-radius: 10px;
         color: white;
+        
+      }
+      .loginBtnAble{
         background-color: #0095F6;
-        &:disabled {
-          background-color: #C0DFFD;
-        }
+      }
+      .loginBtnUnable{
+        background-color: #C0DFFD;
       }
     }
     
