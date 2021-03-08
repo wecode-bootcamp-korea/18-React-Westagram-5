@@ -1,5 +1,6 @@
 import React from "react";
 import './Comment.scss';
+import CommentList from "./CommentList"
 
 class Comment extends React.Component {
   constructor(){
@@ -34,13 +35,7 @@ class Comment extends React.Component {
   render(){ 
     return (
       <section className="commentArea">
-        <ul className="commentList">
-          {this.state.commentList.map((comment =>
-                  <li>
-                    <a>{this.state.name}</a> {comment}
-                  </li>
-          ))}        
-        </ul>
+        <CommentList name={this.state.name} commentList={this.state.commentList}/>
         <span>1시간 전</span>
         <div className="comment">
           <img alt="emoji icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" height="24px" />
