@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Comment from './Comment';
 import './Main.scss';
 
 
 class Mainwoo extends Component {
-	state = {  }
-	render() { 
+
+    render() { 
 		return (
 			<div className="Main">
             <nav>
@@ -80,21 +81,16 @@ class Mainwoo extends Component {
                         </section>
     
                         <a className="section_like" href="#">좋아요 552개</a>
-    
                         <section className="section_hashtag">
                             <a className="section_hashtag_id" href="#">wooyoung</a>
                                 "화이트 와인? 레드 와인?""
                             <br />
                             <a href="#">#wine</a>                          
                             <a href="#">#와인</a>
+                            <div className="comment_input">111</div>
                         </section>
                         <a className="time_before" href="#"><time datetime="#">4시간 전</time></a>                    
-    
-                        <section className="section_comment">
-                            <button className="comment_emoticon"><img src="https://www.flaticon.com/svg/vstatic/svg/152/152515.svg?token=exp=1614846551~hmac=041be83f817bc2f192a9f39022b149de" alt="smile" /></button>
-                            <textarea className="comment_textarea" placeholder="댓글 달기..."></textarea>
-                            <button className="comment_button">게시</button>
-                        </section>
+                        <Comment />
                     </article>
                 </div>
                 <sidebar className="main-right">
