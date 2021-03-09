@@ -2,6 +2,29 @@ import React from 'react';
 import './Main.scss';
 
 class Mainlee extends React.Component {
+    constructor() {
+        super();
+        this.state ={
+            id: "mavieestbellee",
+            commentList: [],
+        }
+    }
+
+    postComment = (e) => {
+        e.preventDefault();
+        this.setState({
+            commentList: this.state.commentList.concat(e.target.value),
+        })
+    }
+
+    handleOnKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            this.postComment();
+        }
+    }
+
+
+
     render() {
         return (
             <div className="Main">
@@ -55,8 +78,73 @@ class Mainlee extends React.Component {
                                     <img src="https://i.pinimg.com/originals/b7/ab/c2/b7abc255056b1bcf3cb506c44ada29c7.png" alt="save" class="postIcons" />
                                 </div>
                             </div>
+                            
+
+
                             <div className="commentBox">
-                                <div className="displayComment">
+                                <div className="commentFeed">
+                                    <div className="postWriter">
+                                        <p className="postUsername">mavieestbellee</p>
+                                        <span className="postDesc">
+                                            드라이브 가다 찍은 사진! 날 너무 좋다
+                                        </span>
+                                    </div>
+                                    <div className="actualComments">
+                                        <ul className="commentList">
+                                            <li>
+                                                <p className="commentUser">hyojin_bambi</p>
+                                                <span className="commentDesc">예쁘다❤️</span>
+                                                </li>
+                                                <li>
+                                                <p className="commentUser">changrock</p>
+                                                <span className="commentDesc">나 빼고 어디가냐</span>
+                                            </li>
+                                            {this.state.commentList.map((comments) => {
+                                                    <li>
+                                                        <p className="commentUser">{this.state.id}</p>
+                                                        <span className="commentDesc">{comments}</span>
+                                                    </li>
+                                                })
+                                            }
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <form className="commentInputBox">
+                                    <img src="https://i.pinimg.com/originals/9f/0b/f5/9f0bf5aecaab85ce0aa9363a6bc30aad.jpg" />
+                                    <input placeholder="Post Comment" id="comment" className="commentInput" onKeyPress={this.handleOnKeyPress.bind(this)} />
+                                    <button type="submit" className="commentBtn" onClick={this.postComment.bind(this)}>Post</button>
+                                </form>    
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div className="mainRight">
+                        <div className="profileBox">
+                            <div className="profileDetail">
+                                <div className="rightAccountInfo">
+                                <img
+                                    src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/43820559_293430734623864_6684762093918355456_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=n61ZtqsRTHAAX8UTGiA&oh=7f362cf871a203ae7ed98fcf5a27ae15&oe=606182D3"
+                                    alt="profile image"
+                                    className="postAccountPicture" />
+                                    <span className="rightAccountInfo">mavieestbellee</span>
+                                </div>
+                                <button className="profileButton">Switch</button>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Mainlee;
+
+
+/*                                 <div className="displayComment">
                                         <p className="likeCount">35 likes</p>
                                         <ul id="postedComments">
                                             <li className="comments">what a scene!</li>
@@ -66,16 +154,23 @@ class Mainlee extends React.Component {
                                     <input type="text" id="commentInput" />
                                     <button id="commentBtn">Post</button>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="mainRight">
-                        <img src='blob:https://mail.google.com/b93dc97d-5209-4726-b958-e261222e83e4' />
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
 
-export default Mainlee;
+                                        <li>
+                                            <p className="commentUser">hyojin_bambi</p>
+                                            <span className="commentDesc">예쁘다❤️</span>
+                                            </li>
+                                            <li>
+                                            <p className="commentUser">changrock</p>
+                                            <span className="commentDesc">나 빼고 어디가냐</span>
+                                        </li>
+                                            
+                                
+                                {this.state.commentList.map((comments) => {
+                                                    <li>
+                                                        <p className="commentUser">{this.state.id}</p>
+                                                        <span className="commentDesc">{comments}</span>
+                                                    </li>
+                                                })
+                                            }
+                                
+                                */
