@@ -53,9 +53,9 @@ class Comment extends React.Component{
                 <textarea 
                     className="comment_textarea" 
                     placeholder="댓글 달기..."
+                    value={this.state.newReply}
                     onChange={this.textChange}
-                    onKeyPress={this.enterClick}
-                    value={this.state.newReply}>
+                    onKeyPress={this.enterClick}>
                 </textarea>
                 <button className="comment_button" onClick={this.buttonClick}>게시</button>
             </div>
