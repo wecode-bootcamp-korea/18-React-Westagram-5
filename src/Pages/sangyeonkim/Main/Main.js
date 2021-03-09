@@ -19,8 +19,8 @@ class Mainkim extends Component {
     this.setState({ value: event.target.value });
   };
 
-  pressEnter = (e) => {
-    if (e.key === "Enter") {
+  pressEnter = (event) => {
+    if (event.key === "Enter") {
       this.submitComment();
     }
   };
