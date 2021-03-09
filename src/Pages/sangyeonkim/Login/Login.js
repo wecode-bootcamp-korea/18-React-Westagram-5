@@ -33,7 +33,7 @@ class Loginkim extends Component {
             <div className="instagram">
               <p className="westaTitle">Westagrams</p>
             </div>
-            <div className="login-page">
+            <div className="loginPage">
               <div>
                 <input
                   type="text"
@@ -54,8 +54,8 @@ class Loginkim extends Component {
                 <button
                   className={
                     id.includes("@") && pw.length > 4
-                      ? "login-btn-active"
-                      : "login-btn"
+                      ? "loginBtnActive"
+                      : "loginBtn"
                   }
                   onClick={this.goToMain}
                 >
@@ -64,17 +64,17 @@ class Loginkim extends Component {
               </div>
             </div>
             <div className="or">
-              <div className="or-left"></div>
-              <div className="or-center">
-                <p className="or-text">또는</p>
+              <div className="orLeft"></div>
+              <div className="orCenter">
+                <p className="orText">또는</p>
               </div>
-              <div className="or-right"></div>
+              <div className="orRight"></div>
             </div>
             <div className="facebook">
-              <div className="facebook-image">
+              <div className="facebookImage">
                 <FaFacebookSquare color="blue" />
               </div>
-              <div className="facebook-login">
+              <div className="facebookLogin">
                 <p>Facebook으로 로그인</p>
               </div>
             </div>
@@ -83,10 +83,10 @@ class Loginkim extends Component {
             </div>
           </section>
           <aside className="side">
-            <div className="side-account">
+            <div className="sideAccount">
               <p>계정이 없으신가요?</p>
             </div>
-            <div className="side-in">
+            <div className="sideIn">
               <a href="https://ko-kr.facebook.com/">가입하기</a>
             </div>
           </aside>

@@ -1,7 +1,10 @@
 import React from "react";
 import "./Main.scss";
-import { CgSmile } from "react-icons/cg";
 import westa from "./westa-feeds.png";
+import { CgSmile } from "react-icons/cg";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BiPaperPlane } from "react-icons/bi";
+import { FaRegComment, FaRegBookmark } from "react-icons/fa";
 
 class MainFeeds extends React.Component {
   constructor() {
@@ -12,12 +15,12 @@ class MainFeeds extends React.Component {
     };
   }
 
-  inputComment = (event) => {
-    this.setState({ value: event.target.value });
+  inputComment = (e) => {
+    this.setState({ value: e.target.value });
   };
 
-  pressEnter = (event) => {
-    if (event.key === "Enter") {
+  pressEnter = (e) => {
+    if (e.key === "Enter") {
       this.submitComment();
     }
   };
@@ -34,19 +37,19 @@ class MainFeeds extends React.Component {
   render() {
     return (
       <>
-        <article className="westa-feeds">
-          <div className="westa-images">
-            <img className="westa-nike" src={westa} alt="나이키" />
-            <div className="search-bottom">
-              <div className="westa-icon-images">
+        <article className="westaFeeds">
+          <div className="westaImages">
+            <img className="westaNike" src={westa} alt="나이키" />
+            <div className="searchBottom">
+              <div className="westaIconImages">
                 <div className="westaIcons">
-                  <i class="far fa-heart fa-2x" />
-                  <i class="far fa-paper-plane fa-2x" />
-                  <i class="far fa-comment fa-2x" />
+                  <AiOutlineHeart size="30" />
+                  <BiPaperPlane size="30" />
+                  <FaRegComment size="30" />
                 </div>
                 <div className="westaIcons2">
                   <div>
-                    <i class="far fa-bookmark fa-2x" />
+                    <FaRegBookmark size="30" />
                   </div>
                 </div>
               </div>
@@ -66,11 +69,11 @@ class MainFeeds extends React.Component {
               </ul>
             </div>
           </div>
-          <div className="total-search">
+          <div className="totalSearch">
             <div className="smile">
               <CgSmile size="30" />
             </div>
-            <div className="search-second">
+            <div className="searchSecond">
               <input
                 className="string"
                 type="text"
@@ -79,8 +82,8 @@ class MainFeeds extends React.Component {
                 onKeyDown={this.pressEnter}
               />
             </div>
-            <div className="serach-add">
-              <button className="string-second" onClick={this.submitComment}>
+            <div className="serachAdd">
+              <button className="stringSecond" onClick={this.submitComment}>
                 게시
               </button>
             </div>

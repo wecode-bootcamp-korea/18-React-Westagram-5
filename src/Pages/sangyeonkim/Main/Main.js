@@ -10,7 +10,7 @@ class Mainkim extends Component {
       <>
         <NavTop />
         <main className="main">
-          <div className="main-page">
+          <div className="mainPage">
             <MainFeeds />
             <MainRight />
           </div>
