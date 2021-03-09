@@ -81,15 +81,6 @@ class Mainwoo extends Component {
                         </section>
     
                         <a className="section_like" href="#">좋아요 552개</a>
-                        <section className="section_hashtag">
-                            <a className="section_hashtag_id" href="#">wooyoung</a>
-                                "화이트 와인? 레드 와인?""
-                            <br />
-                            <a href="#">#wine</a>                          
-                            <a href="#">#와인</a>
-                            <div className="comment_input">111</div>
-                        </section>
-                        <a className="time_before" href="#"><time datetime="#">4시간 전</time></a>                    
                         <Comment />
                     </article>
                 </div>
