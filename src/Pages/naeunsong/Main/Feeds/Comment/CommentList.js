@@ -3,11 +3,12 @@ import './Comment.scss';
 
 class CommentList extends React.Component {
   render(){
+    const {commentList, name} = this.props
     return (
     <ul className="commentList">
-      {this.props.commentList.map((comment =>
+      {commentList.map((comment =>
       <li>
-        <a>{this.props.name}</a> {comment}
+        <a>{name}</a> {comment}
       </li>
       ))}        
     </ul>

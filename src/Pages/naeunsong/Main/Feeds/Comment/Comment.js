@@ -1,6 +1,6 @@
 import React from "react";
 import './Comment.scss';
-import CommentList from "./CommentList"
+import CommentList from "./CommentList";
 
 class Comment extends React.Component {
   constructor(){
@@ -33,14 +33,16 @@ class Comment extends React.Component {
   }
 
   render(){ 
+    const { name, commentList, comment} = this.state;
+    const {pressEnter, addComment, handleCommentInput} = this;
     return (
       <section className="commentArea">
-        <CommentList name={this.state.name} commentList={this.state.commentList}/>
+        <CommentList name={name} commentList={commentList}/>
         <span>1시간 전</span>
         <div className="comment">
           <img alt="emoji icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" height="24px" />
-          <textarea onKeyPress={this.pressEnter} onChange={this.handleCommentInput} value={this.state.comment} placeholder="댓글 달기..." className="textArea"></textarea>
-          <button onClick={this.addComment} className="commentBtn">게시</button>
+          <textarea onKeyPress={pressEnter} onChange={handleCommentInput} value={comment} placeholder="댓글 달기..." className="textArea"></textarea>
+          <button onClick={addComment} className="commentBtn">게시</button>
         </div>
       </section>
     )
