@@ -5,22 +5,32 @@ class Mainlee extends React.Component {
     constructor() {
         super();
         this.state ={
-            id: "mavieestbellee",
-            commentList: [],
+            value: "",
+            commentList: [{
+                id: "mavieestbellee",
+                value: "",
+            }],
         }
     }
 
-    postComment = (e) => {
+    handleInput = (e) => {
         e.preventDefault();
         this.setState({
-            commentList: this.state.commentList.concat(e.target.value),
+            value: e.target.value
         })
+        console.log(this.state.value)
     }
 
     handleOnKeyPress = (e) => {
         if (e.key === 'Enter') {
-            this.postComment();
+            this.addComments();
         }
+    }
+
+    addComments = () => {
+        this.setState ({
+            commentList: this.state.commentList.concat(this.state.value)
+        })
     }
 
 
@@ -113,8 +123,8 @@ class Mainlee extends React.Component {
 
                                 <form className="commentInputBox">
                                     <img src="https://i.pinimg.com/originals/9f/0b/f5/9f0bf5aecaab85ce0aa9363a6bc30aad.jpg" />
-                                    <input placeholder="Post Comment" id="comment" className="commentInput" onKeyPress={this.handleOnKeyPress.bind(this)} />
-                                    <button type="submit" className="commentBtn" onClick={this.postComment.bind(this)}>Post</button>
+                                    <input placeholder="Post Comment" id="comment" className="commentInput" onChange={this.handleInput} onKeyPress={this.handleOnKeyPress} />
+                                    <button type="submit" className="commentBtn" onClick={this.addComments}>Post</button>
                                 </form>    
                             </div>
                         </div>
@@ -142,35 +152,3 @@ class Mainlee extends React.Component {
 }
 
 export default Mainlee;
-
-
-/*                                 <div className="displayComment">
-                                        <p className="likeCount">35 likes</p>
-                                        <ul id="postedComments">
-                                            <li className="comments">what a scene!</li>
-                                        </ul>
-                                </div>
-                                <div className="writeComment">
-                                    <input type="text" id="commentInput" />
-                                    <button id="commentBtn">Post</button>
-                                </div>
-
-                                        <li>
-                                            <p className="commentUser">hyojin_bambi</p>
-                                            <span className="commentDesc">예쁘다❤️</span>
-                                            </li>
-                                            <li>
-                                            <p className="commentUser">changrock</p>
-                                            <span className="commentDesc">나 빼고 어디가냐</span>
-                                        </li>
-                                            
-                                
-                                {this.state.commentList.map((comments) => {
-                                                    <li>
-                                                        <p className="commentUser">{this.state.id}</p>
-                                                        <span className="commentDesc">{comments}</span>
-                                                    </li>
-                                                })
-                                            }
-                                
-                                */
