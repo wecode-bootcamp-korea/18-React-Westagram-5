@@ -5,34 +5,28 @@ class Mainlee extends React.Component {
     constructor() {
         super();
         this.state ={
-            value: "",
-            commentList: [{
-                id: "mavieestbellee",
-                value: "",
-            }],
+          value: "",
+          commentList: [{
+            id: "mavieestbellee",
+            comment: "",
+          }],
         }
     }
 
     handleInput = (e) => {
-        e.preventDefault();
-        this.setState({
-            value: e.target.value
-        })
-        console.log(this.state.value)
+      this.setState({
+        value: e.target.value,
+      })
     }
 
-    handleOnKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            this.addComments();
-        }
-    }
 
-    addComments = () => {
+    addComments = (e) => {
+       e.preventDefault();
         this.setState ({
-            commentList: this.state.commentList.concat(this.state.value)
+          value: "",
+          commentList: this.state.commentList.concat({id: 'mavieestbelle', comment: this.state.value})
         })
     }
-
 
 
     render() {
@@ -104,26 +98,27 @@ class Mainlee extends React.Component {
                                             <li>
                                                 <p className="commentUser">hyojin_bambi</p>
                                                 <span className="commentDesc">예쁘다❤️</span>
-                                                </li>
-                                                <li>
+                                              </li>
+                                              <li>
                                                 <p className="commentUser">changrock</p>
                                                 <span className="commentDesc">나 빼고 어디가냐</span>
                                             </li>
-                                            {this.state.commentList.map((comments) => {
-                                                    <li>
-                                                        <p className="commentUser">{this.state.id}</p>
-                                                        <span className="commentDesc">{comments}</span>
-                                                    </li>
-                                                })
-                                            }
-                                            
+                                            {this.state.commentList.map( (comment) => {
+                                              console.log(comment.comment)
+                                              return (
+                                                <li key={comment}>
+                                                  <p className="commentUser">{comment.id}this.state.commet</p>
+                                                  <span className="commentDesc">{comment.comment}</span>
+                                                </li>
+                                              )
+                                            })}
                                         </ul>
                                     </div>
                                 </div>
 
                                 <form className="commentInputBox">
-                                    <img src="https://i.pinimg.com/originals/9f/0b/f5/9f0bf5aecaab85ce0aa9363a6bc30aad.jpg" />
-                                    <input placeholder="Post Comment" id="comment" className="commentInput" onChange={this.handleInput} onKeyPress={this.handleOnKeyPress} />
+                                    <img src="https://i.pinimg.com/originals/9f/0b/f5/9f0bf5aecaab85ce0aa9363a6bc30aad.jpg" alt="smile icon"/>
+                                    <input value ={this.state.value} placeholder="Post Comment" id="comment" className="commentInput" onChange={this.handleInput} />
                                     <button type="submit" className="commentBtn" onClick={this.addComments}>Post</button>
                                 </form>    
                             </div>
@@ -131,15 +126,13 @@ class Mainlee extends React.Component {
                     </div>
 
                     
-                    <div className="mainRight">
+                       <div className="mainRight">
                         <div className="profileBox">
                             <div className="profileDetail">
                                 <div className="rightAccountInfo">
-                                <img
-                                    src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/43820559_293430734623864_6684762093918355456_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=n61ZtqsRTHAAX8UTGiA&oh=7f362cf871a203ae7ed98fcf5a27ae15&oe=606182D3"
-                                    alt="profile image"
-                                    className="postAccountPicture" />
-                                    <span className="rightAccountInfo">mavieestbellee</span>
+                                  <img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/43820559_293430734623864_6684762093918355456_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=n61ZtqsRTHAAX8UTGiA&oh=7f362cf871a203ae7ed98fcf5a27ae15&oe=606182D3"
+                                 alt="profile image" className="postAccountPicture" />
+                                  <span className="rightAccountInfo">mavieestbellee</span>
                                 </div>
                                 <button className="profileButton">Switch</button>
                             </div>    
