@@ -11,9 +11,20 @@ class Loginkim extends Component {
     };
   }
 
-  goToMain = () => {
-    if (this.state.id.includes("@") && this.state.pw.length > 4)
-      this.props.history.push("./Main");
+  goToMain = (e) => {
+    e.preventDefault();
+    if (this.state.id.includes("@") && this.state.pw.length > 4) {
+      fetch("http://10.58.4.128:8000/user/signin", {
+        method: "POST",
+        body: JSON.stringify({
+          email: this.state.id,
+          password: this.state.pw,
+        }),
+      })
+        .then((response) => response.json())
+        .then((result) => console.log("결과: ", result));
+      this.props.history.push("./Main-sangyeonkim");
+    }
   };
 
   handleIdInput = (event) => {
@@ -57,7 +68,7 @@ class Loginkim extends Component {
                       ? "loginBtnActive"
                       : "loginBtn"
                   }
-                  onClick={this.goToMain}
+                  onClick={(e) => this.goToMain(e)}
                 >
                   로그인
                 </button>

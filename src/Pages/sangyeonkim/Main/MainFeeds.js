@@ -1,6 +1,7 @@
 import React from "react";
+import Comment from "./Comment";
 import "./Main.scss";
-import westa from "./westa-feeds.png";
+import westa from "../../../images/sangyeonkim/westa-feeds.png";
 import { CgSmile } from "react-icons/cg";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiPaperPlane } from "react-icons/bi";
@@ -62,11 +63,7 @@ class MainFeeds extends React.Component {
               <div className="minute">
                 <p>20분전</p>
               </div>
-              <ul className="textBox">
-                {this.state.commentList.map((el) => (
-                  <li>adidas:{el.text}</li>
-                ))}
-              </ul>
+              <Comment commentList={this.state.commentList} />
             </div>
           </div>
           <div className="totalSearch">

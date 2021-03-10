@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.scss";
-import right from "./westa-main-right.png";
+import right from "../../../images/sangyeonkim/westa-main-right.png";
 
 class MainRight extends React.Component {
   state = {};
