@@ -4,9 +4,18 @@ import "../../../Styles/common.scss";
 import {withRouter} from 'react-router-dom';
 
 class Loginsong extends React.Component {
-  goToMain = () => {
-    this.props.history.push('/main-naeunsong');
-  } 
+  goToMain = (e) => {
+    e.preventDefault();
+    fetch("http://10.58.4.237:8000/account/signin",{
+      method:"POST",
+      body: JSON.stringify({
+        email: this.state.userId,
+        password: this.state.userPassword
+      }),
+    })
+    .then(res => res.json())
+    .then(result => result.message === "SUCCSESS" ? this.props.history.push('/main-naeunsong') : alert("아이디와 비밀번호를 확인해주세요"))
+  }
 
   constructor(){
     super();
