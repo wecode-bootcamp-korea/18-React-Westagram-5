@@ -1,4 +1,5 @@
 import React from 'react';
+import Child from './Child';
 import './Main.scss';
 
 
@@ -18,7 +19,7 @@ class Comment extends React.Component{
 
     buttonClick = () =>{
         let arr = this.state.replies;
-        arr.push({ text: this.state.newReply })
+        arr = arr.concat({ text: this.state.newReply })
 
         this.setState({
             newReply: "",
@@ -29,7 +30,7 @@ class Comment extends React.Component{
     enterClick = (e) =>{
         if(e.key === 'Enter' && this.state.newReply){
             this.buttonClick();
-            e.target.value = "";    
+            e.target.value = "";
         }
     }
 
@@ -43,7 +44,7 @@ class Comment extends React.Component{
                 <a href="#">#wine</a>                        
                 <a href="#">#와인</a>
                 <div className="textbox">
-                { this.state.replies.map((e) =>(<li>{e.text}</li>)) }
+                    <Child commentList={this.state.replies} />
                 </div>
             </section>
             <a className="time_before" href="#"><time datetime="#">4시간 전</time></a> 
@@ -60,7 +61,7 @@ class Comment extends React.Component{
                 <button className="comment_button" onClick={this.buttonClick}>게시</button>
             </div>
             </>
-            )           
+        )           
     }
 }
 
