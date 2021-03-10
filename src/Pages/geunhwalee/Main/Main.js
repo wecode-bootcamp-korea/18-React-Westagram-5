@@ -1,4 +1,5 @@
 import React from 'react';
+import Comments from './Comments'
 import './Main.scss';
 
 class Mainlee extends React.Component {
@@ -84,7 +85,6 @@ class Mainlee extends React.Component {
                             </div>
                             
 
-
                             <div className="commentBox">
                                 <div className="commentFeed">
                                     <div className="postWriter">
@@ -94,25 +94,17 @@ class Mainlee extends React.Component {
                                         </span>
                                     </div>
                                     <div className="actualComments">
-                                        <ul className="commentList">
-                                            <li>
-                                                <p className="commentUser">hyojin_bambi</p>
-                                                <span className="commentDesc">예쁘다❤️</span>
-                                              </li>
-                                              <li>
-                                                <p className="commentUser">changrock</p>
-                                                <span className="commentDesc">나 빼고 어디가냐</span>
+                                    <ul className="commentList">
+                                        <li>
+                                            <p className="commentUser">hyojin_bambi</p>
+                                            <span className="commentDesc">예쁘다❤️</span>
                                             </li>
-                                            {this.state.commentList.map( (comment) => {
-                                              console.log(comment.comment)
-                                              return (
-                                                <li key={comment}>
-                                                  <p className="commentUser">{comment.id}this.state.commet</p>
-                                                  <span className="commentDesc">{comment.comment}</span>
-                                                </li>
-                                              )
-                                            })}
-                                        </ul>
+                                            <li>
+                                            <p className="commentUser">changrock</p>
+                                            <span className="commentDesc">나 빼고 어디가냐</span>
+                                        </li>
+                                        <Comments newComments={this.state}/>
+                                        </ul> 
                                     </div>
                                 </div>
 
@@ -126,12 +118,12 @@ class Mainlee extends React.Component {
                     </div>
 
                     
-                       <div className="mainRight">
+                    <div className="mainRight">
                         <div className="profileBox">
                             <div className="profileDetail">
                                 <div className="rightAccountInfo">
                                   <img src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/43820559_293430734623864_6684762093918355456_n.jpg?tp=1&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=n61ZtqsRTHAAX8UTGiA&oh=7f362cf871a203ae7ed98fcf5a27ae15&oe=606182D3"
-                                 alt="profile image" className="postAccountPicture" />
+                                 alt="right side profile" className="postAccountPicture" />
                                   <span className="rightAccountInfo">mavieestbellee</span>
                                 </div>
                                 <button className="profileButton">Switch</button>
