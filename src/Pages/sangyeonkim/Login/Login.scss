@@ -1,19 +1,29 @@
+%alignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%loginBtn {
+  width: 140%;
+  height: 30px;
+  border-radius: 5px;
+  border: 0;
+  color: white;
+}
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 
   .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %alignCenter;
     flex-direction: column;
     height: 600px;
 
     .structure {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @extend %alignCenter;
       flex-direction: column;
       width: 350px;
       height: 400px;
@@ -63,16 +73,13 @@
           font-size: 20px;
 
           .loginBtn {
-            width: 140%;
-            height: 30px;
-            border-radius: 5px;
-            border: 0;
-            color: white;
+            @extend %loginBtn;
             background-color: skyblue;
+          }
 
-            Active {
-              background-color: blue;
-            }
+          .loginBtnActive {
+            @extend %loginBtn;
+            background-color: blue;
           }
         }
       }
@@ -124,9 +131,7 @@
     }
 
     .side {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @extend %alignCenter;
       width: 350px;
       height: 50px;
       margin: 20px auto;
@@ -148,13 +153,4 @@
       }
     }
   }
-}
-
-.loginBtnActive {
-  width: 140%;
-  height: 30px;
-  border-radius: 5px;
-  border: 0;
-  color: white;
-  background-color: blue;
 }

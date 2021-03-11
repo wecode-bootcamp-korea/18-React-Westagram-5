@@ -11,27 +11,28 @@ class MainFeeds extends React.Component {
   constructor() {
     super();
     this.state = {
-      value: "",
-      commentList: [{ text: "" }],
+      commentList: [],
+      commentValue: "",
     };
   }
 
   inputComment = (e) => {
-    this.setState({ value: e.target.value });
+    this.setState({
+      commentValue: e.target.value,
+    });
   };
 
   pressEnter = (e) => {
     if (e.key === "Enter") {
       this.submitComment();
+      e.preventDefault();
     }
   };
 
   submitComment = () => {
-    const comment = {
-      text: this.state.value,
-    };
     this.setState({
-      commentList: this.state.commentList.concat(comment),
+      commentList: this.state.commentList.concat(this.state.commentValue),
+      commentValue: "",
     });
   };
 
@@ -63,10 +64,12 @@ class MainFeeds extends React.Component {
               <div className="minute">
                 <p>20분전</p>
               </div>
-              <Comment commentList={this.state.commentList} />
+              {this.state.commentList.map((comment, index) => {
+                return <Comment key={index} value={comment} />;
+              })}
             </div>
           </div>
-          <div className="totalSearch">
+          <form className="totalSearch">
             <div className="smile">
               <CgSmile size="30" />
             </div>
@@ -76,7 +79,8 @@ class MainFeeds extends React.Component {
                 type="text"
                 placeholder="댓글 달기"
                 onChange={this.inputComment}
-                onKeyDown={this.pressEnter}
+                onKeyPress={this.pressEnter}
+                value={this.state.commentValue}
               />
             </div>
             <div className="serachAdd">
@@ -84,7 +88,7 @@ class MainFeeds extends React.Component {
                 게시
               </button>
             </div>
-          </div>
+          </form>
         </article>
       </>
     );
