@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userName": "songbetter",
+    "content": "18기 화이팅",
+    "isLiked": true
+  },
+  {
+    "id": 2,
+    "userName": "joonsikyang",
+    "content": "프둥이들 화이팅",
+    "isLiked": false
+  },
+  {
+    "id": 3,
+    "userName": "seunghyenson",
+    "content": "프론트 백엔드 모두 사랑해요",
+    "isLiked": false
+  }
+]
