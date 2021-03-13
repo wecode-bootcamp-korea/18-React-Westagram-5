@@ -26,7 +26,7 @@ class Feed extends React.Component {
       </section>
       <section className="feedInfo">
         <div className="feedInfo1">
-          <strong>wecode_bootcamp</strong> <span>{this.props.content}</span>
+          <strong>{userName}</strong> <span>{this.props.content}</span>
         </div>
       </section>
       <Comment/>
