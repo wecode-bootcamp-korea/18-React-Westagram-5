@@ -1,0 +1,28 @@
+.feed{
+  padding-bottom: 10px;
+  
+  .articleProfile{
+    display: flex;
+    width: 300px;
+    height: 60px;
+    padding: 16px;
+    
+    img {
+      height: 32px;
+      border-radius: 80px;
+    }
+  }
+
+  .feedImg img{
+    width: 639px;
+  }
+
+  .feedinfo img {
+    height: 32px;
+    border-radius: 80px;
+  }
+
+  .feedInfo,.likeShare {
+    padding: 0px 16px;
+  }
+}
