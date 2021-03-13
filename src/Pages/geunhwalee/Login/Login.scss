@@ -1,0 +1,88 @@
+$theme-color: #fafafa;
+$line-color: #efefef;
+
+* {
+    box-sizing: border-box;
+    background-color: $theme-color;
+
+    .Login {
+        width: 100%;
+        height: 100%;
+        
+        .loginBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 450px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 2px solid $line-color;
+            background-color: white;
+
+            input {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 8px;
+                border: 2px solid $line-color;
+                background-color: $theme-color;
+                border-radius: 3px;
+                color: #cacaca;
+                font-size: 25px;
+                &::placeholder {
+                    padding-left: 10px;
+                    font-size: 13px;
+                }
+            }
+            
+            button {
+                display: block;
+                width: 80%;
+                height: 30px;
+                margin: 5px;
+                margin: 0 auto;
+                margin-top: 3px;
+                border: none;
+                border-radius: 3px;
+                color: white;
+                background-color: #c5e1fa;   
+            }
+
+            .btnColorChange {
+                display: block;
+                width: 80%;
+                height: 30px;
+                margin: 5px;
+                margin: 0 auto;
+                margin-top: 3px;
+                border: none;
+                border-radius: 3px;
+                color: white;
+                background-color: #0080ff;
+            }
+
+            
+            
+            h1 {
+                margin: 0;
+                margin: 20px;
+                font-family: 'Lobster', cursive;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            #pwdAsk {
+                margin: 0 auto;
+                margin-top: 140px;
+                color: #2d5780;
+                text-decoration: none;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+    }
+}
