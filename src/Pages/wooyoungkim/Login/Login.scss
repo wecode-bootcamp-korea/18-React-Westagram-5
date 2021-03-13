@@ -1,57 +1,53 @@
 %flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+$theme-height: 30px;
+
+.Login {
+  @extend %flex-column;
+  border: 1px solid gray;
+  width: 348px;
+  height: 400px;
+  margin: 200px auto;
+  justify-content: center;
+  text-align: center;
+
+  .westagram {
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    margin-bottom: 70px;
   }
-  
-  $theme-height: 30px;
-  
-  .Login{
-      @extend %flex-column;
-      border: 1px solid gray;
-      width: 348px;
-      height: 400px;
-      margin: 200px auto;
-      justify-content: center;
-      text-align: center;
-  
-    .westagram{
-      font-family: 'Lobster', cursive;
-      font-size: 50px;
+
+  .loginBorder {
+    @extend %flex-column;
+    margin: 0 40px;
+
+    .loginId {
+      margin-bottom: 5px;
+      line-height: $theme-height;
+    }
+
+    .loginPw {
+      margin-bottom: 10px;
+      line-height: $theme-height;
+    }
+
+    button {
       margin-bottom: 70px;
+      line-height: $theme-height;
+      border: none;
+      border-radius: 10px;
+      color: white;
     }
-    
-    .login_border{
-      @extend %flex-column;
-      margin: 0 40px;
-  
-      .login_txt {
-        margin-bottom: 5px;
-        line-height: $theme-height;
-      }
-      .login_pwd{
-        margin-bottom: 10px;
-        line-height: $theme-height;
-      }
-      button{
-        margin-bottom: 70px;
-        line-height: $theme-height;
-        border: none;
-        border-radius: 10px;
-        color: white;
-        
-      }
-      .loginBtnAble{
-        background-color: #0095F6;
-      }
-      .loginBtnUnable{
-        background-color: #C0DFFD;
-      }
+
+    .loginBtnAble {
+      background-color: #0095f6;
     }
-    
-    a{
-      text-decoration: none;
-    }
-    *{
-      box-sizing: border-box;
+
+    .loginBtnUnable {
+      background-color: #c0dffd;
     }
   }
+}

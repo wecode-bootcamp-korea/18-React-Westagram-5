@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Pent_House",
+    "age": 32,
+    "comment": "안녕하세요"
+  },
+  {
+    "id": 2,
+    "name": "WeCode_Bootcamp",
+    "age": 27,
+    "comment": "반갑습니다!"
+  }
+]
