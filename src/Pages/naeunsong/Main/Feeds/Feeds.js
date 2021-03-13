@@ -11,6 +11,16 @@ class Feeds extends React.Component {
   }
 
   componentDidMount(){
+    /*fetch('http://10.58.3.143:8000/posting/upload',{
+      method:"POST",
+      headers: {
+        'Authorization': localStorage.getItem('wtw.token')
+           },
+      body: JSON.stringify({
+        image : '',
+        content :''
+    })
+  })*/
   fetch("/data/feedData.json")
     .then (res => res.json())
     .then (res => this.setState ({
