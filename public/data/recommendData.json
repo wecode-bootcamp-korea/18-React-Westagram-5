@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userName": "송나은",
+    "userId": "sonbetter",
+    "img_url": "https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/120448479_975679696266669_3341802946101100591_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=3Y26-0VV8lUAX-Q-nEI&tp=1&oh=465a7e09af8e32eecf62d726ffa9ecdd&oe=605C9F0B"
+  },
+  {
+    "id": 2,
+    "userName": "WeCode - 위코드",
+    "userId": "wecode_bootcamp",
+    "img_url": "https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/64219646_866712363683753_7365878438877462528_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=G1pc0slT5dYAX-0PnDa&tp=1&oh=a7a51c4739ea8b87566b329ecdc33b43&oe=605C5770"
+  },
+  {
+    "id": 3,
+    "userName": "토미",
+    "userId" : "songtommy",
+    "img_url": "https://ca.slack-edge.com/TH0U6FBTN-U01HXJAHJ02-03d0864e58db-72"
+  }
+]
