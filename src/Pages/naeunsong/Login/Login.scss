@@ -1,16 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+$border-box: 1px solid #dbdbdb ;
+$color-main: rgba(250,250,250,1) ;
 
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-input, button{
-  outline: none;
-}
+.borderBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $color-main;
 
 .login{
   display: flex;
@@ -20,7 +17,7 @@ input, button{
   width: 350px;
   height: 380px;
   margin: auto;
-  border: 1px solid #dbdbdb;
+  border: $border-box;
   background-color: white;
   text-align: center;
   
@@ -34,8 +31,8 @@ input, button{
     width: 70%;
     margin: 4px;
     padding: 9px 0 7px 8px;
-    background-color: rgba(250,250,250,1);
-    border: 1px solid #dbdbdb;
+    background-color: $color-main;
+    border: $border-box;
     border-radius: 4px;
     line-height: 18px;
     font-size: 12px;
@@ -43,7 +40,7 @@ input, button{
     
   button {
     width: 70%;
-    margin: 8px 0px 60px 0px;
+    margin: 8px 0px 60px;
     border: 1px solid transparent;
     border-radius: 4px;
     color: white;
@@ -62,4 +59,5 @@ input, button{
     background-color: white;
     font-size: 12px;
   }
+}
 }

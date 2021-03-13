@@ -3,32 +3,4 @@
   margin-right: 28px;
   border: solid 1px #dbdbdb;
   background-color:white;
-  
-  .feed{
-  padding-bottom: 10px;
-  
-    .articleProfile{
-      display: flex;
-      height: 60px;
-      padding: 16px;
-      
-      img {
-        height: 32px;
-        border-radius: 80px;
-      }
-    }
-
-    .feedImg{
-      width: 100%;
-    }
-
-    .feedinfo img {
-      height: 32px;
-      border-radius: 80px;
-    }
-
-    .feedInfo,.likeShare {
-      padding: 0px 16px;
-    }
-  }
 }

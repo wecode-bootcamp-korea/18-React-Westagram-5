@@ -3,15 +3,12 @@ import './Comment.scss';
 
 class CommentList extends React.Component {
   render(){
-    const {commentList, name} = this.props
+    const {id, name, content, isLiked} = this.props
     return (
-    <ul className="commentList">
-      {commentList.map((comment =>
-      <li>
-        <a>{name}</a> {comment}
+      <li key={id}>
+        <strong>{name}</strong> {content} 
+        <span className="heart">{isLiked?'🤍':'💔'}</span> <span className="delete">✖</span>
       </li>
-      ))}        
-    </ul>
     )
   }
 };

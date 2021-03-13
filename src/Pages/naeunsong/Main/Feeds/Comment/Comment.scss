@@ -3,6 +3,9 @@
 
   .commentList{
     padding: 0px;
+    .heart, .delete{
+      cursor: pointer;
+    }
   }
   
   .comment{
