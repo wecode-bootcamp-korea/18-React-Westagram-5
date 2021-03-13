@@ -1,0 +1,27 @@
+
+a {
+  font-weight: bold;
+}
+
+p{
+  margin-left:-5px;
+  color:rgb(104, 69, 69);
+}
+
+.info{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+  background-color: rgba(250,250,250,1);
+}
+
+li{
+  list-style:none;
+}

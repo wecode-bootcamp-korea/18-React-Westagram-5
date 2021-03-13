@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "userId": "wecode",
+    "userName": "WeCode - 위코드",
+    "profileImg": "https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/64219646_866712363683753_7365878438877462528_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=G1pc0slT5dYAX-0PnDa&tp=1&oh=a7a51c4739ea8b87566b329ecdc33b43&oe=605C5770",
+    "content": "20기, 21기, 22기, 23기 모두 조기마감!!",
+    "feedImg": "https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/150915321_179560660629368_165943275422580666_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=uCmsp3r2d7MAX930Q5z&tp=1&oh=40938acaff43a67bb9a8187dccb1abc0&oe=605FCAA5",
+    "alt": "위코드 부트캠프 실내 이미지 안에 SOLDOUT이라고 쓰여있다."
+  },
+  {
+    "id": 2,
+    "userId": "songtommy",
+    "userName": "송토미",
+    "profileImg": "https://ca.slack-edge.com/TH0U6FBTN-U01HXJAHJ02-03d0864e58db-72",
+    "content": "내가 세상 최고 귀여운 고양이다!!",
+    "feedImg": "https://github.com/songbetter/self-introduction/blob/main/tommy1.jpg?raw=true",
+    "alt": "귀여운 고양이 사진"
+  },
+  {
+    "id": 3,
+    "userId": "jordy",
+    "userName": "니니즈 - 죠르디",
+    "profileImg": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg.theqoo.net%2Fimg%2FPvwpd.jpg&type=a340",
+    "content": "죠르디는 죠르귀",
+    "feedImg": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg.theqoo.net%2Fimg%2FPvwpd.jpg&type=a340",
+    "alt": "아..여기도 참 많이 변했네"
+  }
+]

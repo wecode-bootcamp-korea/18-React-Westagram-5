@@ -1,0 +1,12 @@
+.recommend{
+  display: flex;
+  flex-direction: column;
+
+  .recommendText{
+    padding: 4px 16px;
+  }
+
+  img{
+    height: 32px;
+  }
+}

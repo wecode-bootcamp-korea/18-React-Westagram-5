@@ -1,0 +1,44 @@
+
+.mainRight{
+  display: none;
+}
+
+@media (min-width: 900px){
+  .main{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mainRight{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 293px;
+
+    .info{
+      width: 20vw;
+    }
+
+    img {
+      border-radius: 50px;
+    }
+
+    .mainRightProfile {
+      img{
+        height: 56px;
+      }
+    }
+
+    .changeUser{
+      width: 6vw;
+      color: #0095f6;
+      text-align: end;
+    }
+
+    .mainRightProfile{
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+    }
+  }
+}
