@@ -1,0 +1,53 @@
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+$theme-height: 30px;
+
+.Login {
+  @extend %flex-column;
+  border: 1px solid gray;
+  width: 348px;
+  height: 400px;
+  margin: 200px auto;
+  justify-content: center;
+  text-align: center;
+
+  .westagram {
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    margin-bottom: 70px;
+  }
+
+  .loginBorder {
+    @extend %flex-column;
+    margin: 0 40px;
+
+    .loginId {
+      margin-bottom: 5px;
+      line-height: $theme-height;
+    }
+
+    .loginPw {
+      margin-bottom: 10px;
+      line-height: $theme-height;
+    }
+
+    button {
+      margin-bottom: 70px;
+      line-height: $theme-height;
+      border: none;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .loginBtnAble {
+      background-color: #0095f6;
+    }
+
+    .loginBtnUnable {
+      background-color: #c0dffd;
+    }
+  }
+}
