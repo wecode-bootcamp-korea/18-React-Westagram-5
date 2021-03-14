@@ -12,9 +12,7 @@ class Comment extends React.Component {
   }
 
   componentDidMount = () => {
-    fetch("http://localhost:3000/data/data.json", {
-      method: "GET",
-    })
+    fetch("http://localhost:3000/data/data.json")
       .then((res) => res.json())
       .then((data) => {
         this.setState({
@@ -69,7 +67,14 @@ class Comment extends React.Component {
             #그저 빛
           </a>
           <div className="textbox">
-            <CommentForm repliesList={replies} />
+            {replies.map((data) => (
+              <CommentForm
+                key={data.id}
+                name={data.name}
+                age={data.age}
+                comment={data.comment}
+              />
+            ))}
           </div>
         </section>
         <a className="time_before" href="#">
